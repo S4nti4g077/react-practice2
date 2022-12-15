@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 const AddUser = (props) => {
   const [username, setUsername] = useState(props.username);
+  const [age, setAge] = useState(props.age);
   const changeHandler = (e) => {
     setUsername(e.target.value);
   };
@@ -15,11 +16,11 @@ const AddUser = (props) => {
       <form>
         <div>
           <label>Username</label>
-          <input onChange={changeHandler} type="text"></input>
+          <input value={username} onChange={changeHandler} type="text"></input>
         </div>
         <div>
           <label>Age (years)</label>
-          <input onChange={changeHandler} type="number"></input>
+          <input value={age} onChange={changeHandler} type="number"></input>
         </div>
         <button onClick={clickHandler}>Add User</button>
       </form>

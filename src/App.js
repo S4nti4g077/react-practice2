@@ -11,7 +11,7 @@ function App() {
     <div>
       <h1>hello</h1>
       <AddUser />
-      <DisplayUsers username={users[0].username} />
+      <DisplayUsers username={users[0].username} age={users[0].age} />
     </div>
   );
 }
